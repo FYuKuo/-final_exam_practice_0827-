@@ -144,4 +144,6 @@ function to($url)
 $Admin = new DB('admin');
 $View = new DB('view');
 $News = new DB('news');
+$Que = new DB('que');
+$Opt = new DB('opt');
 ?>

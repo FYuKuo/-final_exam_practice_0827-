@@ -146,4 +146,5 @@ $View = new DB('view');
 $News = new DB('news');
 $Que = new DB('que');
 $Opt = new DB('opt');
+$Log = new DB('log');
 ?>

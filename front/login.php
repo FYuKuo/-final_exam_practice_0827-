@@ -38,7 +38,7 @@
         if(parseInt(res) == 1){
             $.get('./api/ch_pw.php',{acc,pw},(res)=>{
                 if(parseInt(res) == 1){
-                    if(acc = 'admin'){
+                    if(acc == 'admin'){
                         location.href='./back.php';
                     }else{
                         location.href='./index.php';

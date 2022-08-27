@@ -353,3 +353,36 @@ cursor:default;
 .nowPage {
 	font-size: 1.5rem;
 }
+
+.news_btns  {
+	margin-left: 2px;
+}
+
+.new_btn{
+	padding: 5px 10px ;
+	border: 1px solid black;
+	background-color: #ddd;
+	margin-left: -1px;
+	cursor: pointer;
+}
+
+.new_list {
+	display: none;
+	border: 1px solid black;
+	margin-top: -1px;
+	margin-left: 1px;
+	padding: 10px;
+}
+
+.activeNew {
+	display: block;
+}
+
+.activeBtn {
+	background-color: white;
+}
+
+.goodBtn {
+	cursor: pointer;
+	color: blue;
+}

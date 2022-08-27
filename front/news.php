@@ -20,8 +20,15 @@
         foreach ($rows as $key => $row) {
         ?>
         <tr>
-            <td class="clo w-20"><?=$row['title']?></td>
-            <td class="w-60"><?=mb_substr($row['text'],0,20)?>...</td>
+            <td class="clo w-20 myClickTitle"><?=$row['title']?></td>
+            <td class="w-60">
+                <span>
+                    <?=mb_substr($row['text'],0,20)?>...
+                </span>
+                <span style="display: none;">
+                    <?=$row['text']?>
+                </span>
+            </td>
             <td>
                 <?php
                 if(isset($_SESSION['user'])){
@@ -69,4 +76,8 @@
             location.reload();
         })
     }
+
+    $('.myClickTitle').on('click',function(){
+        $(this).next().children().toggle();
+    })
 </script>

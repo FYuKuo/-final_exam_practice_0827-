@@ -1,6 +1,25 @@
 ﻿<?php
 $do = ($_GET['do'])??'main';
 include('./api/base.php');
+if(!isset($_SESSION['user']) || $_SESSION['user'] != 'admin'){
+	to('./index.php');
+	exit();
+}
+
+$view = $View->find(['date'=>date('Y-m-d')]);
+if(!isset($_SESSION['view'])){
+	if(empty($view)){
+		$View->save(['date'=>date('Y-m-d'),'total'=>1]);
+	}else{
+		$view['total']++;
+		$View->save($view);
+	}
+$_SESSION['view'] = 1;
+}
+$viewSum = 0;
+foreach ($View->all() as $key => $value) {
+	$viewSum += $value['total'];
+}
 ?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -23,7 +42,7 @@ include('./api/base.php');
 
     <div id="all">
         <div id="title">
-            <?=date('m')?> 月 <?=date('d')?> 號 <?=date('l')?> | 今日瀏覽: 1 | 累積瀏覽: 36 </div>
+            <?=date('m')?> 月 <?=date('d')?> 號 <?=date('l')?> | 今日瀏覽: <?=$view['total']?> | 累積瀏覽: <?=$viewSum?> </div>
         <div id="title2" title="回首頁">
 			<a href="./index.php">
 				<img src="./icon/02B01.jpg" alt="回首頁">

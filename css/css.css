@@ -386,3 +386,7 @@ cursor:default;
 	cursor: pointer;
 	color: blue;
 }
+
+.myClickTitle {
+	cursor: pointer;
+}

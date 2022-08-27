@@ -1,7 +1,12 @@
 <fieldset class="w-60 aut p-20">
     <legend>會員註冊</legend>
-
     <table class="w-90 aut">
+        <tr>
+            <td colspan="2" style="color: red;">
+                
+                *請設定您要註冊的帳號及密碼(最長12個字元)
+            </td>
+        </tr>
         <tr>
             <td class="clo w-50">帳號:</td>
             <td>

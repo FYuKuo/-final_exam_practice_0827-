@@ -340,3 +340,7 @@ cursor:default;
 .a-c{
 	align-self: center;
 }
+
+.p-20 {
+	padding: 20px;
+}

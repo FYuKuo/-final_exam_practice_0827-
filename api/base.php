@@ -140,4 +140,8 @@ function to($url)
 {
     header("location:$url");
 }
+
+$Admin = new DB('admin');
+$View = new DB('view');
+$News = new DB('news');
 ?>

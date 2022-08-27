@@ -32,7 +32,7 @@ include('./api/base.php');
         <div id="mm">
 
             <div class="hal" id="lef">
-                <a class="blo" href="./index.php">回首頁</a>
+                <a class="blo" href="?do=admin">帳號管理</a>
                 <a class="blo" href="?do=news">最新文章</a>
                 <a class="blo" href="?do=que">問卷調查</a>
             </div>
@@ -66,10 +66,10 @@ include('./api/base.php');
                     </span>
                     <div class="content">
 						<?php
-						if(file_exists('./front/'.$do.'.php')){
-							include('./front/'.$do.'.php');
+						if(file_exists('./back/'.$do.'.php')){
+							include('./back/'.$do.'.php');
 						}else{
-							include('./front/main.php');
+							include('./back/main.php');
 						}
 						?>
                     </div>

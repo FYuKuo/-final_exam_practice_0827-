@@ -19,3 +19,9 @@ function good(id,type,user)
 		}
 	})
 }
+
+
+
+function reset(){
+	$('input[type=password],input[type=text]').val('');
+}
